@@ -40,7 +40,8 @@ export default class WebfontPlugin {
             return this.compile(callback);
         });
         compiler.plugin("after-emit", (compilation, callback) =>
-            this.watch(compilation, callback)
+            // this.watch(compilation, callback)
+            this.compile(callback)
         );
     }
 

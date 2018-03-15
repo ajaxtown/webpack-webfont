@@ -1,6 +1,6 @@
 {
     "name": "webpack-webfont",
-    "version": "0.0.1-alpha.10",
+    "version": "0.0.1",
     "description": "Webpack plugin for webfont package",
     "license": "MIT",
     "author": "itgalaxy <development@itgalaxy.company>",
@@ -43,10 +43,7 @@
         "url": "https://github.com/itgalaxy/webpack-webfont/issues"
     },
     "main": "dist/WebfontPlugin.js",
-    "files": [
-        "dist",
-        "!**/__tests__"
-    ],
+    "files": ["dist", "!**/__tests__"],
     "dependencies": {
         "fs-extra": "^4.0.0",
         "glob": "^7.1.2",
@@ -112,10 +109,7 @@
         "babel": "inherit"
     },
     "babel": {
-        "presets": [
-            "es2015",
-            "stage-0"
-        ]
+        "presets": ["es2015", "stage-0"]
     },
     "eslintConfig": {
         "rules": {
@@ -129,8 +123,6 @@
         "root": true
     },
     "remarkConfig": {
-        "plugins": [
-            "remark-preset-lint-itgalaxy"
-        ]
+        "plugins": ["remark-preset-lint-itgalaxy"]
     }
 }

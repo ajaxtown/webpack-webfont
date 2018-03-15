@@ -1,6 +1,5 @@
 import fs from "fs-extra";
 import glob from "glob";
-import globParent from "glob-parent";
 import nodify from "nodeify";
 import path from "path";
 import webfont from "webfont";
@@ -115,22 +114,5 @@ export default class WebfontPlugin {
             }),
             error => callback(error)
         );
-    }
-
-    watch(compilation, callback) {
-        const globPatterns =
-            typeof this.options.files === "string"
-                ? [this.options.files]
-                : this.options.files;
-
-        globPatterns.forEach(globPattern => {
-            const context = globParent(globPattern);
-
-            if (compilation.contextDependencies.indexOf(context) === -1) {
-                compilation.contextDependencies.push(context);
-            }
-        });
-
-        return callback();
     }
 }
